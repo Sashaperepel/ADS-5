@@ -4,10 +4,10 @@
 
 template<typename T, int size>
 class TStack {
-private:
+ private:
   T arr[size] = {};
   int top;
-public:
+ public:
 Tstack() : top(-1) {}
   void push(const T& value) {
     if (isFull()) {
