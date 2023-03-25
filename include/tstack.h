@@ -3,7 +3,8 @@
 #define INCLUDE_TSTACK_H_
 #include <string>
 
-template<typename T, int size>
+const int size = 100;
+template<typename T, const int size>
 class TStack {
  private:
   T arr[size] = {};
@@ -36,6 +37,9 @@ Tstack() {
   }
   int isFull() {
     return top == size;
+  }
+  ~TStack() {
+    delete[] arr;
   }
 };
 
