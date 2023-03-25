@@ -25,7 +25,7 @@ int getPrior(char op) {
 std::string infx2pstfx(std::string inf) {
   std:: string out = "";
   bool flag = true;
-  Tstack <char, 100> stack1;
+  TStack <char, 100> stack1;
   for (int i = 0; i < inf.length(); i++) {
     if (getPrior(inf[i]) == inf[i]) {
       out = out + inf[i] + ' ';
@@ -65,7 +65,7 @@ int eval(std::string pref) {
   int sum = 0;
   int x = 0;
   int i = 0;
-  Tstack <int, 100> stack1;
+  TStack <int, 100> stack1;
   while (i < pref.length()) {
     if (getPrior(pref[i]) == pref[i]) {
       stack1.push(pref[i] - 48);
