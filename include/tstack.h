@@ -8,7 +8,7 @@ class TStack {
  private:
   T arr[size] = {};
   int top;
-  
+
  public:
 Tstack() : top(-1) {}
   void push(const T& value) {
