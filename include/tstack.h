@@ -34,9 +34,6 @@ class TStack {
   int isFull() {
     return top == size;
   }
-  ~TStack() {
-    delete[] arr;
-  }
 };
 
 #endif  // INCLUDE_TSTACK_H_
