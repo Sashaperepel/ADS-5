@@ -11,7 +11,7 @@ class TStack {
   int top;
 
  public:
-Tstack() {
+  TStack() {
   arr = new T[size];
   top = -1;
 }
