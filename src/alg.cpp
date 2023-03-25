@@ -55,12 +55,11 @@ std::string infx2pstfx(std::string inf) {
     }
   }
   while (!stack1.isEmpty()) {
-    if (!stack1.isEmpty()) {
-      out = out + stack1.get() + ' ';
-    } else {
-      out = out + stack1.get();
-    }
+    out = out + stack1.get();
     stack1.pop();
+    if (!stack1.isEmpty()) {
+      out = out + ' ';
+    }
   }
   return out;
 }
