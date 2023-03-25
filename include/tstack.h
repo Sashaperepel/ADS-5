@@ -10,7 +10,10 @@ class TStack {
   int top;
 
  public:
-Tstack() : top(-1) {}
+Tstack() {
+  arr = new T[size];
+  top = -1;
+}
   void push(const T& value) {
     if (isFull()) {
       throw std::string("Full");
