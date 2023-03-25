@@ -3,18 +3,14 @@
 #define INCLUDE_TSTACK_H_
 #include <string>
 
-const int size = 100;
-template<typename T, const int size>
+template<typename T, int size>
 class TStack {
  private:
   T arr[size] = {};
   int top;
 
  public:
-  TStack() {
-  arr = new T[size];
-  top = -1;
-}
+  Tstack() : top(-1) {}
   void push(const T& value) {
     if (isFull()) {
       throw std::string("Full");
