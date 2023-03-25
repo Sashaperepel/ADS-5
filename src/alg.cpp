@@ -66,11 +66,10 @@ int eval(std::string pref) {
   int x = 0;
   int i = 0;
   Tstack <int, 100> stack1;
-  while (i < pref.length()){
+  while (i < pref.length()) {
     if (getPrior(pref[i]) == pref[i]) {
       stack1.push(pref[i] - 48);
-    }
-    else {
+    } else {
       if (pref[i] == '+') {
         x = stack1.get();
         stack1.pop();
